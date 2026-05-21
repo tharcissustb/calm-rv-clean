@@ -1,0 +1,42 @@
+﻿seed: 1
+device: cuda
+
+data:
+  jsonl_path: "data/pheme.jsonl"
+  dataset_name: "pheme"
+  label_space: "tfu"
+  text_field: "text"
+  label_field: "label"
+  group_field: "thread_id"
+  event_field: "event_id"
+  max_len: 256
+
+splits:
+  mode: "in_domain"
+  train_ratio: 0.70
+  val_ratio: 0.10
+  test_ratio: 0.20
+  stratify: true
+  group_split: true
+
+model:
+  backbone: "roberta-base"
+  num_labels: 3
+
+train:
+  epochs: 10
+  batch_size: 16
+  lr: 2.0e-5
+  weight_decay: 0.01
+  warmup_ratio: 0.06
+  grad_clip: 1.0
+  fp16: true
+  early_stop_metric: "macro_f1"
+  early_stop_patience: 2
+
+eval:
+  ece_bins: 15
+  save_predictions: true
+
+output:
+  runs_dir: "outputs/runs"

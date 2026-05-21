@@ -1,0 +1,19 @@
+dataset:
+  name: chinese_rumor
+  path: data/chinese_rumor.jsonl
+  text_field: text
+  label_field: label
+
+model:
+  name: bert-base-chinese  # Use Chinese BERT
+  num_labels: 2
+  max_length: 128
+
+training:
+  batch_size: 16
+  lr: 0.00002
+  epochs: 5
+  seed: 42
+
+output:
+  dir: outputs/runs

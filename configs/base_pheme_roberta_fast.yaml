@@ -1,0 +1,19 @@
+dataset:
+  name: pheme
+  path: data/pheme.jsonl
+  text_field: text
+  label_field: label
+
+model:
+  name: roberta-base
+  num_labels: 3
+  max_length: 128  # Reduced from 256 for speed
+
+training:
+  batch_size: 8    # Smaller for CPU
+  lr: 0.00002
+  epochs: 3        # Reduced for faster testing
+  seed: 42
+
+output:
+  dir: outputs/runs

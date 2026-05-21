@@ -1,0 +1,18 @@
+dataset:
+  path: data/pheme.jsonl
+
+model:
+  name: roberta-base
+  num_labels: 3
+  max_length: 128
+
+training:
+  seed: 42
+  epochs: 5
+  batch_size: 16
+  lr: 2e-5
+
+calibration:
+  lambda_cal: 0.5
+  adaptive_scale: 10.0
+  difficulty_threshold: 0.002

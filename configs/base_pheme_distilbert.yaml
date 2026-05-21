@@ -1,0 +1,19 @@
+dataset:
+  name: pheme
+  path: data/pheme.jsonl
+  text_field: text
+  label_field: label
+
+model:
+  name: distilbert-base-uncased
+  num_labels: 3
+  max_length: 128
+
+training:
+  batch_size: 16
+  lr: 0.00002
+  epochs: 3
+  seed: 42
+
+output:
+  dir: outputs/runs

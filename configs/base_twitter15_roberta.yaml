@@ -1,0 +1,19 @@
+dataset:
+  name: twitter15
+  path: data/twitter15.jsonl
+  text_field: text
+  label_field: label
+
+model:
+  name: roberta-base
+  num_labels: 2  # binary
+  max_length: 128
+
+training:
+  batch_size: 16
+  lr: 0.00002
+  epochs: 5
+  seed: 42
+
+output:
+  dir: outputs/runs
