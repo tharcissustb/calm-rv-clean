@@ -5,7 +5,7 @@ To reproduce the experiments, please download the datasets from the official sou
 
 ## PHEME (Rumour Verification)
 - **Source**: Kochkina et al., figshare, 2018
-- **URL**: [(https://figshare.com/articles/dataset/PHEME_dataset_for_Rumour_Detection_and_Veracity_Classification/6392078)]
+- **URL**: https://figshare.com/articles/dataset/PHEME_dataset_for_Rumour_Detection_and_Veracity_Classification/6392078
 - **Format**: Thread‑based (source tweet + replies), 9 events, 2,402 threads
 - **Labels**: true, false, unverified
 
